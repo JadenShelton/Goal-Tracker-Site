@@ -39,4 +39,11 @@ $('#goal-form').on('submit', function(e) {
             alert('Error creating goal.');
         }
     });
-});I 
+});
+
+$(document).on('click', '.print-btn', function() {
+    let card = $(this).closest('.goal-card');
+    $('.goal-card').not(card).hide();
+    window.print();
+    $('.goal-card').show();
+});

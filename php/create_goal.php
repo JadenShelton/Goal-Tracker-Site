@@ -17,8 +17,8 @@ if(empty($title) || empty($target_value) || empty($deadline)){
     echo json_encode(['success' => false, 'error' => 'Missing required fields']);
     exit;
 } else {
-    $sql = "INSERT INTO jshel02_goals (title, description, start_value, target_value, unit, achievable, relevant, deadline, category) 
-            VALUES ('$title', '$description', $start_value, $target_value, '$unit', '$achievable', '$relevant', '$deadline', '$category')";
+    $sql = "INSERT INTO jshel02_goals (title, description, start_value, target_value, current_value, unit, achievable, relevant, deadline, category) 
+            VALUES ('$title', '$description', $start_value, $target_value, $start_value, '$unit', '$achievable', '$relevant', '$deadline', '$category')";
     $result = mysqli_query($conn, $sql);
 
     if($result) {

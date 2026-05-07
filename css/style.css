@@ -26,15 +26,15 @@
 
 body {
     font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-    background-color: var(--bg);
-    color: var(--text-primary);
+    background-color: lightgrey;
+    color: black;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
 header {
-    background-color: var(--header-bg);
+    background-color: darkslategrey;
     color: white;
     padding: 16px 24px;
     display: flex;
@@ -52,7 +52,7 @@ header h1 {
 }
 
 header button {
-    background-color: var(--accent);
+    background-color: steelblue;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -63,12 +63,41 @@ header button {
 }
 
 header button:hover {
-    background-color: #4338ca;
+    background-color: lightsteelblue;
 }
+
+.goal-card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid slategrey;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.goal-category {
+    display: inline-block;
+    width: fit-content;
+    padding: 4px 12px;
+    color: white;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.goal-category[data-category="fitness"] { background-color: orange; }
+.goal-category[data-category="career"] { background-color: blue; }
+.goal-category[data-category="finance"] { background-color: darkolivegreen; }
+.goal-category[data-category="education"] { background-color: purple; }
+.goal-category[data-category="personal"] { background-color: red; }
+.goal-category[data-category="other"] { background-color: grey; }
+
 
 .progress-bar-container {
     width: 100%;
-    background-color: #e5e7eb;
+    background-color: lightgrey;
     border-radius: 999px;
     height: 18px;
     overflow: hidden;
@@ -76,7 +105,7 @@ header button:hover {
 
 .progress-bar-fill {
     height: 100%;
-    background-color: #4caf50;
+    background-color: green;
     border-radius: 999px;
     text-align: center;
     color: white;
@@ -85,6 +114,103 @@ header button:hover {
     line-height: 18px;
     min-width: 36px;
 }
+
+.goal-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: black;
+}
+
+.goal-description {
+    font-size: 0.85rem;
+    color: grey;
+    font-weight: 500;
+}
+
+.goal-status {
+    font-size: 0.85rem;
+    color: grey;
+    font-weight: 500;
+}
+
+.goal-remainingTime {
+    font-size: 0.82rem;
+    color: grey;
+}
+
+.goal-buttons button {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.goal-buttons {
+    display: flex;
+    gap: 8px;
+    margin-top: 4px;
+}
+
+.goal-buttons button:hover {
+    opacity: 0.85;
+}
+
+.update-btn {
+    background-color: steelblue;
+    color: white;
+}
+
+main {
+    flex: 1;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 24px;
+}
+
+footer {
+    text-align: center;
+    padding: 16px;
+    font-size: 0.8rem;
+    color: white;
+    border-top: 1px solid slategrey;
+    background-color: darkslategrey;
+}
+
+
+#summary-bar {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+#summary-bar div {
+    background-color: white;
+    border-radius: 12px;
+    padding: 16px 24px;
+    flex: 1;
+    text-align: center;
+    border: 1px solid slategrey;
+}
+
+#goal-list {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+#empty-state {
+    grid-column: 1 / -1;
+    color: black;
+    font-size: 1rem;
+    text-align: center;
+    padding: 48px;
+}
+
+
 
 @media print {
     header, footer, #summary-bar, .goal-buttons { display: none; }

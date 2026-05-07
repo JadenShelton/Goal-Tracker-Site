@@ -25,7 +25,7 @@ function loadGoals() {
                 const differenceInMs = targetDate - today;
                 const differenceInDays = Math.ceil(differenceInMs / (1000 * 60 * 60 * 24));
 
-                let goalCard = $('<div class="goal-card">' + '<div class="goal-category">'+ goal.category +'</div>'
+                let goalCard = $('<div class="goal-card">' + '<div class="goal-category" data-category="'+ goal.category +'">'+ goal.category +'</div>'
                     + '<div class="goal-title">' + goal.title + '</div>'
                     + '<div class="goal-description">' + goal.description + '</div>'
                     + '<div class="progress-bar-container"><div class="progress-bar-fill" style="width: ' + progress + '%">'+ progress + '%' +'</div></div>'

@@ -63,7 +63,7 @@ header button {
 }
 
 header button:hover {
-    background-color: lightsteelblue;
+    opacity: 0.85;
 }
 
 .goal-card {
@@ -210,7 +210,76 @@ footer {
     padding: 48px;
 }
 
+.form-container {
+    background-color: white;
+    border-radius: 12px;
+    padding: 32px;
+    max-width: 700px;
+    margin: 0 auto;
+    border: 1px solid slategrey;
+}
 
+.smart-section {
+    border-left: 4px solid steelblue;
+    padding-left: 16px;
+    margin-bottom: 28px;
+}
+
+.smart-section h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: steelblue;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: black;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    padding: 10px 14px;
+    width: 100%;
+    font-family: inherit;
+    border: 1px solid slategrey;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    color: black;
+    background: white;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 14px;
+    background-color: steelblue;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+.btn-submit:hover {
+    opacity: 0.85;
+}
 
 @media print {
     header, footer, #summary-bar, .goal-buttons { display: none; }

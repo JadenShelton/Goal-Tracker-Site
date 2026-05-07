@@ -13,56 +13,86 @@
     </header>
 
     <main>
-        <form action="php/create_goal.php" method="POST" id="goal-form">
-            <h2>S - Specific</h2>
-            <label for="title">Goal Title:</label><br>
-            <input type="text" name="title" id="title"><br><br>
+        <div class="form-container">
+            <form action="php/create_goal.php" method="POST" id="goal-form">
+                <div class="smart-section">
+                    <h2>S - Specific</h2>
+                    <div class="form-group">
+                        <label for="title">Goal Title:</label><br>
+                        <input type="text" name="title" id="title"><br><br>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="category">Goal Category:</label><br>
+                        <select name="category" id="category">
+                            <option value="fitness">Fitness</option>
+                            <option value="career">Career</option>
+                            <option value="finance">Finance</option>
+                            <option value="education">Education</option>
+                            <option value="personal">Personal Development</option>
+                            <option value="other">Other</option>
+                        </select><br><br>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="description">Goal Description:</label>
+                        <textarea name="description" id="description" placeholder="e.g. I want to run a 5K race without stopping"></textarea><br><br>
+                    </div>
+                </div>
 
-            <label for="category">Goal Category:</label><br>
-            <select name="category" id="category">
-                <option value="fitness">Fitness</option>
-                <option value="career">Career</option>
-                <option value="finance">Finance</option>
-                <option value="education">Education</option>
-                <option value="personal">Personal Development</option>
-                <option value="other">Other</option>
-            </select><br><br>
+                <div class="smart-section">
+                    <h2>M - Measurable</h2>
+                    <div class="form-group">
+                        <label for="start_value">Starting Value:</label>
+                        <input type="number" name="start_value" id="start_value"><br><br>
+                    </div>
 
-            <label for="description">Goal Description:</label>
-            <textarea name="description" id="description" placeholder="e.g. I want to run a 5K race without stopping"></textarea><br><br>
+                    <div class="form-group">
+                        <label for="target_value">Target Value:</label>
+                        <input type="number" name="target_value" id="target_value"><br><br>
+                    </div>
 
-            <h2>M - Measurable</h2>
-            <label for="start_value">Starting Value:</label>
-            <input type="number" name="start_value" id="start_value"><br><br>
+                    <div class="form-group">
+                        <label for="unit">Value Unit:</label>
+                        <select name="unit" id="unit">
+                            <option value="miles">Miles</option>
+                            <option value="lbs">Pounds</option>
+                            <option value="reps">Repetitions</option>
+                            <option value="%">Percentage</option>
+                            <option value="$">Dollars</option>
+                            <option value="score">Score</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
 
-            <label for="target_value">Target Value:</label>
-            <input type="number" name="target_value" id="target_value"><br><br>
+                <div class="smart-section">
+                    <h2>A - Achievable</h2>
+                    <div class="form-group">
+                        <label for="achievable">Is this goal achievable?</label>
+                        <textarea name="achievable" id="achievable" placeholder="e.g. Yes, I can train for this by running 3 times a week and gradually increasing my distance."></textarea><br><br>
+                    </div>
+                </div>
 
-            <label for="unit">Value Unit:</label>
-            <select name="unit" id="unit">
-                <option value="miles">Miles</option>
-                <option value="lbs">Pounds</option>
-                <option value="reps">Repetitions</option>
-                <option value="%">Percentage</option>
-                <option value="$">Dollars</option>
-                <option value="score">Score</option>
-                <option value="other">Other</option>
-            </select>
+                <div class="smart-section">
+                    <h2>R - Relevant</h2>
+                    <div class="form-group">
+                        <label for="relevant">Why is this goal relevant to you?</label>
+                        <textarea name="relevant" id="relevant" placeholder="e.g. I want to improve my cardiovascular health and feel more energetic."></textarea><br><br>
+                    </div>
+                </div>
 
-            <h2>A - Achievable</h2>
-            <label for="achievable">Is this goal achievable?</label>
-            <textarea name="achievable" id="achievable" placeholder="e.g. Yes, I can train for this by running 3 times a week and gradually increasing my distance."></textarea><br><br>
+                <div class="smart-section">
+                    <h2>T - Time-bound</h2>
+                    <div class="form-group">
+                        <label for="deadline">Goal Deadline:</label>
+                        <input type="date" name="deadline" id="deadline"><br><br>
+                    </div>
+                </div>
 
-            <h2>R - Relevant</h2>
-            <label for="relevant">Why is this goal relevant to you?</label>
-            <textarea name="relevant" id="relevant" placeholder="e.g. I want to improve my cardiovascular health and feel more energetic."></textarea><br><br>
-
-            <h2>T - Time-bound</h2>
-            <label for="deadline">Goal Deadline:</label>
-            <input type="date" name="deadline" id="deadline"><br><br>
-
-            <button type="submit">Create Goal</button>
-        </form>
+                <button class="btn-submit" type="submit">Create Goal</button>
+            </form>
+        </div>
     </main>
 
     <footer>
